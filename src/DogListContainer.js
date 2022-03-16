@@ -4,7 +4,7 @@ export function DogListContainer() {
   const [breeds, setBreeds] = React.useState([])
 
   React.useEffect(() => {
-    fetch('dog.ceo/api/breeds/list/all')
+    fetch('https://dog.ceo/api/breeds/list/all')
       .then(res => res.json())
       .then(
         result => {
