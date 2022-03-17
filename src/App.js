@@ -1,9 +1,11 @@
 // DO NOT DELETE
 
 import * as React from 'react'
+import './destyle.css'
 import './App.css'
 import { Header } from './Header.js'
 import { Description } from './Description.js'
+import { DogListContainer } from './DogListContainer.js'
 
 /**
  *
@@ -14,6 +16,7 @@ export const App = () => {
     <div className="dog">
       <Header />
       <Description />
+      <DogListContainer />
     </div>
   )
 }
