@@ -1,104 +1,145 @@
 @charset "utf-8";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
 
-* {
-    margin: 2px;
-}
-
-p {
-    text-align: center;
+hr {
+  margin: 30px 0px 20px 0px;
+  border-top: 1px solid rgba(194, 184, 36, 0.288);
+  border-bottom: none;
 }
 
 .dog {
-    background-color: rgb(255, 255, 255);
+  margin: 0px 10px 0px 10px;
+  background-color: rgb(255, 255, 255);
 }
 
-.dog__header {
-    background-color: rgb(226, 201, 55);
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    height: auto;
-    font-size: 40px;
-    text-align: center;
+.dogHeader {
+  margin-bottom: 10px;
+  background-color: rgb(226, 201, 55);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: auto;
+  font-size: 40px;
+  text-align: center;
 }
 
-.dog__overview {
-    font-size: 20px;
-    color: rgb(63, 63, 63);
+.dogTop__content {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.dog__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dogTop__content--overview {
+  margin: 0px;
+  min-width: 50%;
+  max-width: 50%;
+  font-size: 15px;
+  color: rgb(63, 63, 63);
+  text-align: center;
+}
+
+.dogTop__content--main {
+  margin: 0px;
+  max-width: 50%;
+}
+
+.dog__img--top {
+  display: inline-flex;
+  width: 100%;
+  max-height: 500px;
+}
+
+.dog__img--breeds {
+  display: inline-flex;
+  width: 250px;
+  height: 250px;
+  margin: 5px;
 }
 
 .dog__img {
-    max-width: 80%;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
-.dog__button {
-    width: 200px;
-    height: 40px;
-    margin-top: 10px;
-    font-size: 18px;
-    border-radius: 6px;
-    border-style: none;
-    background-color:rgb(226, 201, 55);
-    color: rgb(255, 255, 255);
+.dog__content--button {
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin-left: auto;
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 6px;
+  border-style: none;
+  background-color: rgb(226, 201, 55);
+  color: rgb(255, 255, 255);
 }
 
-.dog__button:hover {
-    background-color:rgb(194, 184, 36);
-    color: rgb(206, 206, 206);
-    cursor:pointer;
+.dog__content--button:hover {
+  background-color: rgb(194, 184, 36);
+  color: rgb(206, 206, 206);
+  cursor: pointer;
 }
 
-.dog__select__breeds {
-    margin-top: 20px;
-    position: relative;
-    display: flex;
-    margin-bottom: 15px;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
+.dogBreeds__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.dog__select__breeds select {
-    display: inline-block;
-    width: 100%;
-    cursor: pointer;
-    padding: 10px 15px;
-    outline: 0;
-    border: 0;
-    border-radius: 0;
-    background: rgb(226, 201, 55);
-    color: rgb(255, 255, 255);
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+
+.dogBreeds__content--images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.dog__select__breeds select::-ms-expand {
-    display: none;
+
+.dogBreeds__select {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.dog__select__breeds select:hover, .dog__select__breeds select:focus {
-    color: rgb(206, 206, 206);
-    background: rgb(194, 184, 36);
+.dogBreeds__select p {
+  width: 50%;
+  font-size: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+  text-align: right;
 }
-.dog__select__breeds select:disabled {
-    opacity: 0.5;
-    pointer-events: none;
+.dogBreeds__select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  height: 40px;
+  padding-left: 15px;
+  border: 0;
+  border-radius: 6px;
+  background: rgb(226, 201, 55);
+  color: rgb(255, 255, 255);
 }
-.select__arrow {
-    position: absolute;
-    top: 16px;
-    right: 15px;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    border-style: solid;
-    border-width: 8px 5px 0 5px;
-    border-color: white transparent transparent transparent;
+
+.dogBreeds__content--button {
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-radius: 6px;
+  border-style: none;
+  background-color: rgb(226, 201, 55);
+  color: rgb(255, 255, 255);
 }
-.dog__select__breeds select:hover ~ .select__arrow, .dog__select__breeds select:focus ~ .select__arrow {
-    border-top-color:rgb(206, 206, 206);
+
+.dogBreeds__content--button:hover {
+  background-color: rgb(194, 184, 36);
+  color: rgb(206, 206, 206);
+  cursor: pointer;
 }

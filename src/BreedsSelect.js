@@ -6,13 +6,11 @@ export function BreedsSelect(props) {
     <option value={breed}>{breed}</option>
   ))
   return (
-    <div class="dog__content">
-      <div class="dog__select__breeds">
+      <div class="dogBreeds__select">
+        <p>Breeds List:</p>
         <select value={props.state} onChange={props.handleChange}>
           {options}
         </select>
-        <div class="select__arrow"></div>
       </div>
-    </div>
   )
 }
