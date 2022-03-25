@@ -21,16 +21,18 @@ export function Description() {
   }
 
   return (
-    <div>
-      <p className="dog__overview">犬の画像を表示するサイトです。</p>
-      <div className="dog__content">
-        <DogImage url={dogUrl} />
+    <div class="dogTop__content">
+      <div class="dogTop__content--overview">
+        犬の画像を表示するサイトです。
       </div>
-      <p>
-        <button className="dog__button" onClick={getDogImage}>
+      <div class="dogTop__content--main">
+        <div class="dog__img--top">
+          <DogImage url={dogUrl} />
+        </div>
+        <button class="dog__content--button" onClick={getDogImage}>
           更新
         </button>
-      </p>
+      </div>
     </div>
   )
 }
