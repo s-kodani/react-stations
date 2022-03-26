@@ -1,9 +1,9 @@
 @charset "utf-8";
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
-hr {
+/* hr {
   margin: 30px 0px 20px 0px;
   border-top: 1px solid rgba(194, 184, 36, 0.288);
   border-bottom: none;
@@ -142,4 +142,4 @@ hr {
   background-color: rgb(194, 184, 36);
   color: rgb(206, 206, 206);
   cursor: pointer;
-}
+} */

@@ -42,24 +42,22 @@ export function DogListContainer() {
     setSelectedBreed(event.target.value)
   }
   const images = breedImages.map(dogUrl => (
-    <div class="dog__img--breeds">
-      <DogImage url={dogUrl} />
+    <div class="avatar w-60">
+      <div class="shadow-lg">
+        <DogImage url={dogUrl} />
+      </div>
     </div>
   ))
   return (
-    <div>
-      <div class="dogBreeds__content">
-        <BreedsSelect
-          breeds={breeds}
-          state={selectedBreed}
-          handleChange={handleChange}
-        />
-        <button className="dogBreeds__content--button" onClick={getBreedImages}>
-          表示
-        </button>
-      </div>
-      <div>
-        <div class="dogBreeds__content--images">{images}</div>
+    <div class="my-2">
+      <BreedsSelect
+        breeds={breeds}
+        state={selectedBreed}
+        handleChange={handleChange}
+        getBreedImages={getBreedImages}
+      />
+      <div class="my-8">
+        <div class="flex gap-4 flex-wrap justify-center">{images}</div>
       </div>
     </div>
   )
