@@ -13,9 +13,10 @@ import { DogListContainer } from './DogListContainer.js'
  */
 export const App = () => {
   return (
-    <div className="dog">
+    <div className="md:container md:mx-auto">
       <Header />
       <Description />
+      <hr class="m-8"></hr>
       <DogListContainer />
     </div>
   )
